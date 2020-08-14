@@ -41,7 +41,11 @@ module.exports = function (config) {
     junitReporter: {
       outputFile: "test-results.xml",
       outputDir: "test-results"
-    }
+    },
+    
+    chromeOptions: {
+      args: ['--disable-setuid-sandbox', '--no-sandbox']
+   },
 
   });
 };
