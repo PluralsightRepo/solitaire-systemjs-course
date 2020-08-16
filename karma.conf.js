@@ -43,9 +43,12 @@ module.exports = function (config) {
       outputDir: "test-results"
     },
     
-    chromeOptions: {
-      args: ['--disable-setuid-sandbox', '--no-sandbox']
-   },
+    customLaunchers: {
+      Chrome: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
+      }
+    },
 
   });
 };
